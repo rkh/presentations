@@ -9,7 +9,7 @@
     foo = Foo.new
     
     # require 'foo_bar/blah'
-    bar = FooBar::Blah.nen
+    bar = FooBar::Blah.new
 
 !SLIDE
     @@@ ruby
