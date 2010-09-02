@@ -1,6 +1,34 @@
+@import "compass/css3"
+@import "compass/utilities"
+
 .content
   a
     &:link, &:visited
       text-decoration: none
       color: #000
       border-bottom: 1px dotted #000
+
+body
+  +linear-gradient(color-stops(#eff5ff 20%, #f3ffff 80%, #fff))
+  background:
+    color: #fff
+    repeat: no-repeat
+    attachment: fixed
+  #preso
+    background-color: transparent !important
+    margin-top: 50px !important
+    width: 1050px !important
+    .slide
+      width: 1050px !important
+      +border-radius(50px)
+      img
+        margin-left: 13px
+  #footer
+    background-color: transparent !important
+    #slideInfo
+      position: absolute
+      top: 5px
+      right: 20px
+      color: #abd
+      text-align: right
+      z-index: 9999 !important
