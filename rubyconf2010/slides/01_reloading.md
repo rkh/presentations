@@ -1,3 +1,9 @@
+!SLIDE bullets
+
+# Live Code Reloading #
+
+* (aka reworking ActiveSupport::Dependencies)
+
 !SLIDE bullets incremental
 
 # Reloading Crash Course #
@@ -14,58 +20,40 @@
 
 # Internal Architecture #
 
-!SLIDE
     @@@ ruby
     module ActiveSupport::Dependencies
       Constant["Foo"].active?
       Constant["Bar"].activate
     end
 
-!SLIDE
+!SLIDE bullets incremental
 
 # Battle Testing #
-
-!SLIDE bullets incremental
 
 * Old constant references become delegates
 * Better constant definition tracking
 * Instance invalidation
 * `$LOADED_FEATURES` aware
-
-!SLIDE
-
-# Come again? #
+* dependency tracking (`require_dependency`)
 
 !SLIDE bullets incremental
+
+# Come again? #
 
 * No more "Foo is not missing Bar"
 * (Nearly) no more "Already activated constant Blah"
 * Less unintentional behavior
 * `require` doesn't screw things up
+* No more "Where did my patch go?"
 
 !SLIDE bullets incremental
-
-# Dependency tracking #
-
-* aka "Where did my patch go?"
-
-!SLIDE
-    @@@ ruby
-    # my_user_patch.rb
-    require_dependency "user"
-    
-    module MyUserPatch
-      User.send :include, self
-      def say(something) end
-    end
-
-!SLIDE
 # Only reload on file changes #
+
+* (optional)
 
 !SLIDE
 # Pluggable Reloading Strategies #
 
-!SLIDE
     @@@ ruby
     module SinatraReloading
       def invalidate_remains; end
@@ -85,16 +73,6 @@
 * World reloading (default)
 * Sloppy reloading (don't use)
 * <s style="color: #888">Monkey</s> Freedom Patching strategy
-
-!SLIDE
-    @@@ ruby
-    AS::Dependencies.default_strategy = :sloppy
-    
-    MyClass.unloadable \
-      :strategy => :monkey_patching
-    
-    AS::Dependencies::Constant["JustInCase"].
-      strategy = :world
 
 !SLIDE bullets
 # Thanks! #
