@@ -4,15 +4,6 @@
 
 * (aka reworking ActiveSupport::Dependencies)
 
-!SLIDE bullets incremental
-
-# Reloading Crash Course #
-
-* self-patching constants
-* actually restart your app
-* remove constant, reload file
-* [rkh.im/2010/08/code-reloading](http://rkh.im/2010/08/code-reloading)
-
 !SLIDE
 # What changed? #
 
@@ -46,7 +37,7 @@
 * `require` doesn't screw things up
 * No more "Where did my patch go?"
 
-!SLIDE bullets incremental
+!SLIDE bullets
 # Only reload on file changes #
 
 * (optional)
