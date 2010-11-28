@@ -1,1 +1,8 @@
-{ "name": "No Title", "sections": [ {"section":"slides"} ]}
+{
+  "name": "No Title",
+  "sections": [
+    { "section": "intro"  },
+    { "section": "slides" },
+    { "section": "outro"  }
+  ]
+}
