@@ -1,5 +1,5 @@
 !SLIDE bullets incremental
-# Keyword arguments #
+# Keyword Arguments #
 
     @@@ ruby
     

@@ -1,5 +1,5 @@
 !SLIDE bullets incremental
-# Non-language features #
+# Non-Language Features #
 
 * New Garbage Collector
 * Nokogiri in stdlib
