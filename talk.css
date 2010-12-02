@@ -79,3 +79,7 @@ body {
   margin-top: 150px;
   font-size: 9em;
 }
+/* line 44, talk.sass */
+.slide .small {
+  font-size: 50%;
+}
