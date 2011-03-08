@@ -56,4 +56,8 @@
 * other core devs
 * other lib devs
 * news people
+
+!SLIDE bullets
+
+# Alright, let's go 1.2 #
     
