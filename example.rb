@@ -28,6 +28,11 @@ class Example < Sinatra::Base
   enable :inline_templates, :logging, :static
   set :public, File.expand_path('../public', __FILE__)
 
+  set(:say) do |*args|
+    subscribers.each { |s| s.send(*args) }
+    nil
+  end
+
   def escape(data)
     EscapeUtils.escape_html(data).gsub("\n", "<br>").
       gsub("\t", "    ").gsub(" ", "&nbsp;")
@@ -57,7 +62,7 @@ class Example < Sinatra::Base
       stdout = [e.to_s, *e.backtrace.map { |l| "\t#{l}" }].join("\n")
     end
     source = escape stdout
-    subscribers.each { |s| s.send source, line }
+    settings.say source, line
     ''
   end
 end
