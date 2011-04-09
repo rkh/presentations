@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* line 4, talk.sass */
 body {
   background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #aaaaaa), color-stop(80%, #eeeeee), color-stop(100%, #ffffff));
@@ -82,4 +81,8 @@ body {
 /* line 45, talk.sass */
 .slide .small {
   font-size: 50%;
+}
+/* line 48, talk.sass */
+.slide .large {
+  font-size: 200%;
 }
