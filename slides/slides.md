@@ -1,18 +1,23 @@
 !SLIDE bullets
 
-* After this talk, you'll be like...
+* ![breaking](breaking.png)
 
 !SLIDE center
-![Y U NO have memes in there??](Y-U-NO-have-memes-in-there.jpg)
+![ajax](ajax.png)
+
+!SLIDE center
+![comet](comet.png)
 
 !SLIDE bullets
 
-* Breaking the laws of <s>physics</s> Rack!
+* ![real_time](real_time.jpg)
 
 !SLIDE bullets incremental
 
-* polling sucks
-* even long polling
+# Come again? #
+
+* streaming
+* server push
 
 !SLIDE bullets
 
@@ -30,14 +35,22 @@
 
 <iframe src="/events?" width="980" height="600"></iframe>
 
+!SLIDE bullets
+
+# Rack #
+
+* Ruby to HTTP to Ruby bridge
+* Middleware API
+* Powers Rails, Sinatra, Ramaze, ...
+
+!SLIDE center
+![Request - Response](rack2.png)
+
 !SLIDE center
 ![Rack](rack1.png)
 
 !SLIDE center
 ![Rack](rack3.png)
-
-!SLIDE center
-![Rack](graph.png)
 
 !SLIDE
 
@@ -50,7 +63,29 @@
 !SLIDE
 
     @@@ ruby
+    welcome_app = Object.new
+
+    def welcome_app.call(env)
+      [200, {'Content-Type' => 'text/html'},
+        ['Welcome!']]
+    end
+
+!SLIDE
+
+    @@@ ruby
+    env    = parse_http
+    result = welcome_app.call env
+
+    generate_http(result)
+
+!SLIDE
+
+    @@@ ruby
     get('/') { 'Welcome!' }
+
+!SLIDE
+
+# Middleware #
 
 !SLIDE
 
@@ -87,10 +122,6 @@
 
     generate_http(result)
 
-
-!SLIDE center
-![Request - Response](rack2.png)
-
 !SLIDE
 # Streaming with #each #
 
@@ -107,7 +138,7 @@
       end
     end
 
-!SLIDE bullet
+!SLIDE bullets
 
 * Let's build a messaging service!
 
@@ -164,6 +195,27 @@
 
 !SLIDE
 
+    @@@ ruby
+    sleep 10
+    puts "10 seconds are over"
+    
+    puts Redis.new.get('foo')
+
+!SLIDE
+
+    @@@ ruby
+
+    EM.add_timer 10 do
+      puts "10 seconds are over"
+    end
+
+    redis = EM::Hiredis.connect
+    redis.get('foo').callback do |value|
+      puts value
+    end
+
+!SLIDE
+
 # With #throw #
 
     @@@ ruby
@@ -208,6 +260,18 @@
 !SLIDE
 
     @@@ ruby
+    require 'sinatra/async'
+
+    aget '/' do
+      redis.get('foo').callback do |value|
+        body value
+      end
+    end
+
+
+!SLIDE
+
+    @@@ ruby
     env = parse_http
     cb  = proc { |r| generate_http(r) }
 
@@ -223,9 +287,20 @@
 * that's postponing ...
 * ... not streaming
 
-!SLIDE bullets
+!SLIDE
 
-* EM::Deferrable
+# EM::Deferrable #
+
+!SLIDE
+
+    @@@ ruby
+    class Foo
+      include EventMachine::Deferrable
+    end
+
+    f = Foo.new
+    f.callback { puts "sucess!" }
+    f.succeed
 
 !SLIDE
 
@@ -303,10 +378,58 @@
 !SLIDE bullets incremental
 
 * Think one-way WebSockets
-* No protocol upgrade
+* Simpler than WebSockets
 * Resumable
 * Client can be implemented in JS
 * Degrade gracefully to polling
+
+!SLIDE
+
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
+
+    data: This is the first message.
+
+!SLIDE
+
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
+
+    data: This is the first message.
+
+    data: This is the second message, it
+    data: has two lines.
+
+!SLIDE
+
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
+
+!SLIDE
+
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
+
+    data: This is the first message.
+
+    data: This is the second message, it
+    data: has two lines.
+
+    data: This is the third message.
+
+!SLIDE
+
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
+    
+    data: the client
+    id: 1
+    
+    data: keeps track
+    id: 2
+    
+    data: of the last id
+    id: 3
 
 !SLIDE
 
@@ -334,16 +457,6 @@
 
 * Think two-way EventSource
 
-!SLIDE bullets incremental
-
-# WebSockets have issues #
-
-* Clients need patching
-* Servers need patching
-* Proxies need patching
-* Rack needs patching
-* Security issues
-
 !SLIDE
 
     @@@ javascript
@@ -364,6 +477,15 @@
 
 !SLIDE
 
+    @@@ javascript
+    var src = new WebSocket('ws://127.0.0.1/');
+
+    src.onmessage = function (event) {
+      alert(event.data);
+    };
+
+!SLIDE
+
     @@@ ruby
     options = { host: '127.0.0.1', port: 8080 }
     EM::WebSocket.start(options) do |ws|
@@ -372,8 +494,16 @@
 
 !SLIDE bullets incremental
 
+# WebSockets have issues #
+
+* Clients need patching
+* Servers need patching
+* Proxies need patching
+* Rack needs patching
+
+!SLIDE bullets incremental
+
 # SPDY #
 
 * Replacement for HTTPS
 * Supports pushing
-* No Ruby implementation

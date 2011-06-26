@@ -23,15 +23,25 @@ class EventSource
   end
 end
 
-class Example < Sinatra::Base
-  scope, line, subscribers = binding, 1, []
-  enable :inline_templates, :logging, :static
-  set :public, File.expand_path('../public', __FILE__)
+module Scope
+  def self.send(*args)
+    Example.subscribers.each { |s| s.send(*args) }
+  end
 
-  set(:say) do |*args|
-    subscribers.each { |s| s.send(*args) }
+  def self.puts(*args)
+    args.each { |str| send str.to_s }
     nil
   end
+
+  def self.binding
+    Kernel.binding
+  end
+end
+
+class Example < Sinatra::Base
+  enable :inline_templates, :logging, :static
+  set :public, File.expand_path('../public', __FILE__)
+  set :subscribers => [], :scope => Scope.binding, :line => 1
 
   def escape(data)
     EscapeUtils.escape_html(data).gsub("\n", "<br>").
@@ -41,7 +51,7 @@ class Example < Sinatra::Base
   get '/events.es' do
     content_type request.preferred_type("text/event-stream", "text/plain")
     body EventSource.new
-    subscribers << body
+    settings.subscribers << body
     EM.next_tick { env['async.callback'].call response.finish }
     throw :async
   end
@@ -54,15 +64,15 @@ class Example < Sinatra::Base
     begin
       result = nil
       stdout = capture_stdout do
-        result = eval("_ = (#{params[:code]})", scope, "(irb)", line)
-        line += 1
+        result = eval("_ = (#{params[:code]})", settings.scope, "(irb)", settings.line)
+        settings.line += 1
       end
       stdout << "=> " << result.inspect
     rescue Exception => e
       stdout = [e.to_s, *e.backtrace.map { |l| "\t#{l}" }].join("\n")
     end
     source = escape stdout
-    settings.say source, line
+    Scope.send source
     ''
   end
 end
@@ -72,15 +82,29 @@ __END__
 @@ script
 
 $(document).ready ->
-  input  = $("#input")
-  log    = $("#log")
-  output = (str) ->
+  input   = $("#input")
+  log     = $("#log")
+  history = []
+  count   = 0
+  output  = (str) ->
     log.append str
     log.append "<br>"
     input.attr scrollTop: input.attr("scrollHeight")
 
+  input.bind "keydown", (e) ->
+    if e.keyCode == 38 or e.keyCode == 40
+      count += e.keyCode - 39
+      count = 0 if count < 0
+      count = input.length + 1 if count > input.length
+      input.val history[count]
+      false
+    else
+      true
+
   $("#form").live "submit", (e) ->
     value = input.val()
+    history.push value
+    count++
     $.post '/run', code: input.val()
     output "&gt;&gt; #{value}"
     input.val ""

@@ -3,17 +3,24 @@
 
 * Konstantin Haase
 
-!SLIDE bullets
-# Me #
+!SLIDE center
+![me](me.jpg)
 
-* Potsdam/Berlin, Germany
-* [rkh.im](http://rkh.im/), [github/rkh](http://github.com/rkh), [@konstantinhaase](http://twitter.com/konstantinhaase)
-* Student at Hasso Plattner Institute
-* Ruby dev at [Finnlabs](http://finn.de)
+!SLIDE center
+![rkh](rkh.png)
 
-!SLIDE bullets smallcode
-# Me #
+!SLIDE center
+![finnlabs](finnlabs.png)
 
-* Sinatra, tons of small libs
-* Tilt, Rubinius, Rack, Rails, ...
-* ![almost-sinatra](almost-sinatra.png)
+!SLIDE center
+![sinatra](sinatra1.png)
+
+!SLIDE center
+![sinatra](sinatra2.png)
+
+!SLIDE center
+![rack](rack.png)
+
+!SLIDE center
+![rubinius](rubinius.png)
+
