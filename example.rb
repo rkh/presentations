@@ -111,7 +111,7 @@ $(document).ready ->
     input.focus()
     e.preventDefault()
 
-  src = new EventSource('http://localhost:9090/events.es')
+  src = new EventSource('/events.es')
   src.onmessage = (e) -> output e.data
 
 @@ html
