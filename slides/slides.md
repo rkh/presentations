@@ -3,6 +3,9 @@
 * ![breaking](breaking.png)
 
 !SLIDE center
+![web](ie.png)
+
+!SLIDE center
 ![ajax](ajax.png)
 
 !SLIDE center
@@ -44,15 +47,13 @@
 * Powers Rails, Sinatra, Ramaze, ...
 
 !SLIDE center
-![Request - Response](rack2.png)
 
-!SLIDE center
-![Rack](rack1.png)
-
-!SLIDE center
-![Rack](rack3.png)
+![rack](rack_stack.png)
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     welcome_app = proc do |env|
@@ -61,6 +62,9 @@
     end
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     welcome_app = Object.new
@@ -72,22 +76,39 @@
 
 !SLIDE
 
-    @@@ ruby
-    env    = parse_http
-    result = welcome_app.call env
-
-    generate_http(result)
-
-!SLIDE
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     get('/') { 'Welcome!' }
 
 !SLIDE
 
+![pseudo_code](pseudo_code.png)
+![stack](handler.png)
+
+    @@@ ruby
+    env = parse_http
+
+    status, headers, body =
+      welcome_app.call env
+
+    io.puts "HTTP/1.1 #{status}"
+    headers.each { |k,v| io.puts "#{k}: #{v}" }
+    io.puts ""
+
+    body.each { |str| io.puts str }
+
+    close_connection
+
+!SLIDE
+
 # Middleware #
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](middleware.png)
 
     @@@ ruby
     # <p>foo</p> => <P>FOO</P>
@@ -106,6 +127,9 @@
 
 !SLIDE large
 
+![working_code](working_code.png)
+![stack](something_else.png)
+
     @@@ ruby
     # set up middleware
     use UpperCase
@@ -115,17 +139,30 @@
 
 !SLIDE
 
-    @@@ ruby
-    env            = parse_http
-    uppercased_app = UpperCase.new welcome_app
-    result         = uppercased_app.call env
+![working_code](working_code.png)
+![stack](handler.png)
 
-    generate_http(result)
+    @@@ ruby
+    status, headers, body =
+      welcome_app.call(env)
+
+!SLIDE
+
+![working_code](working_code.png)
+![stack](handler.png)
+
+    @@@ ruby
+    app = UpperCase.new(welcome_app)
+
+    status, headers, body = app.call(env)
 
 !SLIDE
 # Streaming with #each #
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](handler.png)
 
     @@@ ruby
     my_body = Object.new
@@ -144,6 +181,9 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
     subscribers = []
 
@@ -155,23 +195,26 @@
 
     post '/' do
       subscribers.each do |s|
-        s << params[:message]
+        s.send params[:message]
       end
     end
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
     class Subscriber
-      def <<(line)
-        @line = line
+      def send(data)
+        @data = data
         @thread.wakeup
       end
 
       def each
         @thread = Thread.current
         loop do
-          yield @line.to_s
+          yield @data.to_s
           sleep
         end
       end
@@ -181,7 +224,7 @@
 
 * blocks the current thread
 * does not work well with some middleware
-* does not work on evented servers<br>(Thin, Goliath, Ebb, Rainbows!)
+* does not work (well) on evented servers<br>(Thin, Goliath, Ebb, Rainbows!)
 
 !SLIDE
 
@@ -195,6 +238,9 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](something_else.png)
+
     @@@ ruby
     sleep 10
     puts "10 seconds are over"
@@ -203,20 +249,47 @@
 
 !SLIDE
 
-    @@@ ruby
+![working_code](working_code.png)
+![stack](something_else.png)
 
-    EM.add_timer 10 do
-      puts "10 seconds are over"
+    @@@ ruby
+    require 'eventmachine'
+
+    EM.run do
+      EM.add_timer 10 do
+        puts "10 seconds are over"
+      end
+
+      redis = EM::Hiredis.connect
+      redis.get('foo').callback do |value|
+        puts value
+      end
     end
 
-    redis = EM::Hiredis.connect
-    redis.get('foo').callback do |value|
-      puts value
+!SLIDE
+
+![pseudo_code](pseudo_code.png)
+![stack](endpoint.png)
+
+    @@@ ruby
+    get '/' do
+      EM.add_timer(10) do
+        env['async.callback'].call [200,
+          {'Content-Type' => 'text/html'},
+          ['sorry you had to wait']]
+      end
+
+      "dear server, I don't have a  " \
+      "response yet, please wait 10 " \
+      "seconds, thank you!"
     end
 
 !SLIDE
 
 # With #throw #
+
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     get '/' do
@@ -232,7 +305,10 @@
 
 !SLIDE
 
-# Status Code -1 #
+# Status Code #
+
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     get '/' do
@@ -248,7 +324,11 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
+    # gem install async-sinatra
     require 'sinatra/async'
 
     aget '/' do
@@ -259,8 +339,11 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
-    require 'sinatra/async'
+    redis = EM::Hiredis.connect
 
     aget '/' do
       redis.get('foo').callback do |value|
@@ -271,14 +354,22 @@
 
 !SLIDE
 
+![pseudo_code](pseudo_code.png)
+![stack](handler.png)
+
     @@@ ruby
     env = parse_http
-    cb  = proc { |r| generate_http(r) }
+
+    cb = proc do |response|
+      send_headers(response)
+      response.last.each { |s| send_data(s) }
+      close_connection
+    end
 
     catch(:async) do
       env['async.callback'] = cb
       response = app.call(env)
-      cb.call response unless response[0] == -1
+      cb.call(response) unless response[0] == -1
     end
 
 
@@ -293,18 +384,62 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](something_else.png)
+
     @@@ ruby
+    require 'eventmachine'
+
     class Foo
-      include EventMachine::Deferrable
+      include EM::Deferrable
     end
 
-    f = Foo.new
-    f.callback { puts "sucess!" }
-    f.succeed
+    EM.run do
+      f = Foo.new
+      f.callback { puts "success!" }
+      f.errback { puts "something went wrong" }
+      f.succeed
+    end
 
 !SLIDE
 
+![pseudo_code](pseudo_code.png)
+![stack](handler.png)
+
     @@@ ruby
+    cb = proc do |response|
+      send_headers(response)
+      response.last.each { |s| send_data(s) }
+      close_connection
+    end
+
+!SLIDE
+
+![pseudo_code](pseudo_code.png)
+![stack](handler.png)
+
+    @@@ ruby
+    cb = proc do |response|
+      send_headers(response)
+      body = response.last
+      body.each { |s| send_data(s) }
+
+      if body.respond_to? :callback
+        body.callback { close_connection }
+        body.errback { close_connection }
+      else
+        close_connect
+      end
+    end
+
+!SLIDE
+
+![working_code](working_code.png)
+![stack](endpoint.png)
+
+    @@@ ruby
+    # THIS IS NOT EVENTED
+
     subscribers = []
 
     get '/' do
@@ -315,11 +450,14 @@
 
     post '/' do
       subscribers.each do |s|
-        s << params[:message]
+        s.send params[:message]
       end
     end
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](endpoint.png)
 
     @@@ ruby
     subscribers = []
@@ -331,18 +469,21 @@
 
     post '/' do
       subscribers.each do |s|
-        s << params[:message]
+        s.send params[:message]
       end
     end
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
     class Subscriber
-      include EventMachine::Deferrable
+      include EM::Deferrable
 
-      def <<(line)
-        @body_callback.call(chunk)
+      def send(data)
+        @body_callback.call(data)
       end
 
       def each(&blk)
@@ -352,10 +493,32 @@
 
 !SLIDE
 
+![pseudo_code](pseudo_code.png)
+![stack](handler.png)
+
+    @@@ ruby
+    cb = proc do |response|
+      send_headers(response)
+      body = response.last
+      body.each { |s| send_data(s) }
+
+      if body.respond_to? :callback
+        body.callback { close_connection }
+        body.errback { close_connection }
+      else
+        close_connect
+      end
+    end
+
+!SLIDE
+
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
     delete '/' do
       subscribers.each do |s|
-        s << "Bye bye!"
+        s.send "Bye bye!"
         s.succeed
       end
     end
@@ -366,7 +529,18 @@
 
 * [dev.w3.org/html5/eventsource](http://dev.w3.org/html5/eventsource/)
 
+!SLIDE bullets incremental
+
+* Think one-way WebSockets
+* Simple
+* Resumable
+* Client can be implemented in JS
+* Degrade gracefully to polling
+
 !SLIDE
+
+![working_code](working_code.png)
+![stack](client.png)
 
     @@@ javascript
     var source = new EventSource('/updates');
@@ -375,13 +549,10 @@
       alert(event.data);
     };
 
-!SLIDE bullets incremental
+!SLIDE
 
-* Think one-way WebSockets
-* Simpler than WebSockets
-* Resumable
-* Client can be implemented in JS
-* Degrade gracefully to polling
+    HTTP/1.1 200 OK
+    Content-Type: text/event-stream
 
 !SLIDE
 
@@ -399,11 +570,6 @@
 
     data: This is the second message, it
     data: has two lines.
-
-!SLIDE
-
-    HTTP/1.1 200 OK
-    Content-Type: text/event-stream
 
 !SLIDE
 
@@ -433,9 +599,12 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](endpoint.png)
+
     @@@ ruby
     class EventSource
-      include EventMachine::Deferrable
+      include EM::Deferrable
 
       def send(data, id = nil)
         data.each_line do |line|
@@ -459,6 +628,9 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](client.png)
+
     @@@ javascript
     var src = new WebSocket('ws://127.0.0.1/');
     
@@ -467,6 +639,9 @@
     };
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](client.png)
 
     @@@ javascript
     var src = new EventSource('/updates');
@@ -477,6 +652,9 @@
 
 !SLIDE
 
+![working_code](working_code.png)
+![stack](client.png)
+
     @@@ javascript
     var src = new WebSocket('ws://127.0.0.1/');
 
@@ -485,6 +663,23 @@
     };
 
 !SLIDE
+
+![working_code](working_code.png)
+![stack](client.png)
+
+    @@@ javascript
+    var src = new WebSocket('ws://127.0.0.1/');
+
+    src.onmessage = function (event) {
+      alert(event.data);
+    };
+
+    src.send("ok, let's go");
+
+!SLIDE
+
+![working_code](working_code.png)
+![stack](something_else.png)
 
     @@@ ruby
     options = { host: '127.0.0.1', port: 8080 }

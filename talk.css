@@ -13,7 +13,7 @@ body {
 
 /* line 11, talk.sass */
 #preso {
-  background-color: white !important;
+  background-color: white;
   -moz-box-shadow: 0px 0px 15px #888888;
   -webkit-box-shadow: 0px 0px 15px #888888;
   -o-box-shadow: 0px 0px 15px #888888;
@@ -34,7 +34,7 @@ body {
 
 /* line 16, talk.sass */
 #footer {
-  background-color: transparent !important;
+  background-color: transparent;
   position: relative;
   top: -20px;
   z-index: 9999 !important;
@@ -48,7 +48,7 @@ body {
 
 /* line 26, talk.sass */
 .slide {
-  background-color: transparent !important;
+  background-color: transparent;
   -moz-border-radius-bottomleft: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -o-border-bottom-left-radius: 15px;
@@ -88,4 +88,18 @@ body {
 /* line 49, talk.sass */
 .slide .large {
   font-size: 200%;
+}
+/* line 52, talk.sass */
+.slide [alt~=stack] {
+  position: absolute;
+  width: 249px;
+  height: 53px;
+  right: 5px;
+  top: 0;
+}
+/* line 59, talk.sass */
+.slide [alt~=working_code], .slide [alt~=pseudo_code] {
+  position: absolute;
+  right: 0;
+  top: 45px;
 }

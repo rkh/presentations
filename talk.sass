@@ -9,12 +9,12 @@ body
     attachment: fixed
 
 #preso
-  background-color: #fff !important
+  background-color: #fff
   +box-shadow(#888, 0px, 0px, 15px)
   +border-bottom-radius(15px)
 
 #footer
-  background-color: transparent !important
+  background-color: transparent
   position: relative
   top: -20px
   z-index: 9999 !important
@@ -24,7 +24,7 @@ body
     color: #aaa
 
 .slide
-  background-color: transparent !important
+  background-color: transparent
   +border-bottom-radius(15px)
   .content
     h1
@@ -48,3 +48,15 @@ body
 
   .large
     font-size: 200%
+
+  [alt~=stack]
+    position: absolute
+    width: 249px
+    height: 53px
+    right: 5px
+    top: 0
+
+  [alt~=working_code], [alt~=pseudo_code]
+    position: absolute
+    right: 0
+    top: 45px

@@ -4,13 +4,10 @@
 * Konstantin Haase
 
 !SLIDE center
-![me](me.jpg)
+![Engine Yard](engine_yard_logo.jpg)
 
 !SLIDE center
 ![rkh](rkh.png)
-
-!SLIDE center
-![finnlabs](finnlabs.png)
 
 !SLIDE center
 ![sinatra](sinatra1.png)
