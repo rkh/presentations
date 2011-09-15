@@ -1,9 +1,11 @@
-@charset "UTF-8";
 /* line 4, talk.sass */
 body {
-  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(20%, #aaaaaa), color-stop(80%, #eeeeee), color-stop(100%, #ffffff));
-  background-image: -moz-linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff 100%);
-  background-image: linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff 100%);
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #aaaaaa), color-stop(80%, #eeeeee), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff);
+  background-image: -moz-linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff);
+  background-image: -o-linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff);
+  background-image: -ms-linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff);
+  background-image: linear-gradient(top, #aaaaaa 20%, #eeeeee 80%, #ffffff);
   background-color: white;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -11,11 +13,11 @@ body {
 
 /* line 11, talk.sass */
 #preso {
-  background-color: white !important;
-  -moz-box-shadow: #888888 0px 0px 15px 0;
-  -webkit-box-shadow: #888888 0px 0px 15px 0;
-  -o-box-shadow: #888888 0px 0px 15px 0;
-  box-shadow: #888888 0px 0px 15px 0;
+  background-color: white;
+  -moz-box-shadow: 0px 0px 15px #888888;
+  -webkit-box-shadow: 0px 0px 15px #888888;
+  -o-box-shadow: 0px 0px 15px #888888;
+  box-shadow: 0px 0px 15px #888888;
   -moz-border-radius-bottomleft: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -o-border-bottom-left-radius: 15px;
@@ -32,7 +34,7 @@ body {
 
 /* line 16, talk.sass */
 #footer {
-  background-color: transparent !important;
+  background-color: transparent;
   position: relative;
   top: -20px;
   z-index: 9999 !important;
@@ -46,7 +48,7 @@ body {
 
 /* line 26, talk.sass */
 .slide {
-  background-color: transparent !important;
+  background-color: transparent;
   -moz-border-radius-bottomleft: 15px;
   -webkit-border-bottom-left-radius: 15px;
   -o-border-bottom-left-radius: 15px;
@@ -62,24 +64,50 @@ body {
 }
 /* line 30, talk.sass */
 .slide .content h1 {
-  font-family: "Chalkduster";
+  font-weight: bold;
 }
-/* line 33, talk.sass */
+/* line 34, talk.sass */
 .slide .content a:link, .slide .content a:visited {
   text-decoration: none;
   color: black;
   border-bottom: 1px dotted black;
 }
-/* line 37, talk.sass */
+/* line 38, talk.sass */
 .slide .content a:hover {
   color: #880000;
 }
-/* line 41, talk.sass */
+/* line 42, talk.sass */
 .slide .title h1, .slide .thanks h1 {
   margin-top: 150px;
   font-size: 9em;
 }
-/* line 45, talk.sass */
+/* line 46, talk.sass */
 .slide .small {
   font-size: 50%;
+}
+/* line 50, talk.sass */
+.slide .smallish {
+  font-size: 80%;
+}
+/* line 53, talk.sass */
+.slide .large {
+  font-size: 200%;
+}
+/* line 57, talk.sass */
+.slide .spaced .sh_smalltalk {
+  margin-bottom: 2em;
+}
+/* line 60, talk.sass */
+.slide [alt~=stack] {
+  position: absolute;
+  width: 249px;
+  height: 53px;
+  right: 5px;
+  top: 0;
+}
+/* line 67, talk.sass */
+.slide [alt~=working_code], .slide [alt~=pseudo_code] {
+  position: absolute;
+  right: 0;
+  top: 45px;
 }
