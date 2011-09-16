@@ -15,7 +15,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    this is it.
+    this is it
 
 &nbsp;
 
@@ -25,7 +25,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    GoGaRuCo rock: #hard.
+    GoGaRuCo rock: #hard
 
 &nbsp;
 
@@ -35,7 +35,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    doc convertFrom: #xml to: #yaml.
+    doc convertFrom: #xml to: #yaml
 
 &nbsp;
 
@@ -45,7 +45,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    doc convertFrom: #xml to: #yaml.
+    doc convertFrom: #xml to: #yaml
 
 &nbsp;
 
@@ -55,7 +55,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    [ 42 ].
+    [ 42 ]
 
 &nbsp;
 
@@ -65,7 +65,7 @@
 !SLIDE spaced
 
     @@@ smalltalk
-    anArray do: [ :each | each doSomething ].
+    anArray do: [ :each | each doSomething ]
 
 &nbsp;
 
@@ -79,7 +79,7 @@
     @@@ smalltalk
     Textmate version = 2
       ifTrue:  [ 'no way' ]
-      ifFalse: [ 'thought so' ].
+      ifFalse: [ 'thought so' ]
 
 &nbsp;
 
@@ -95,7 +95,7 @@
     @@@ smalltalk
     Storage current
       store: #foo;
-      store: #bar.
+      store: #bar
 
 &nbsp;
 
@@ -103,3 +103,19 @@
     storage = Storage.current
     storage.store :foo
     storage.store :bar
+
+!SLIDE spaced
+
+    @@@ smalltalk
+    Smalltalk claims to look
+    like: 'English'.
+
+    Judge yourself. Does it. 
+
+&nbsp;
+
+    @@@ ruby
+    Ruby.claims.to.look.
+    like "English"
+
+    Judge.yourself; Does.it?
