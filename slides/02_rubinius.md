@@ -4,8 +4,7 @@
 
 * [github.com/rkh/Reak](https://github.com/rkh/Reak)
 * Like Squeak but with R
-
-
+* File based (as opposed to image based)
 
 !SLIDE center
 ![Rubinius](rubinius_bumper_sticker.png)
