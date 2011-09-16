@@ -1,3 +1,12 @@
+!SLIDE bullets
+
+# Reak #
+
+* [github.com/rkh/Reak](https://github.com/rkh/Reak)
+* Like Squeak but with R
+
+
+
 !SLIDE center
 ![Rubinius](rubinius_bumper_sticker.png)
 
