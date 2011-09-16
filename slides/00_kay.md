@@ -16,16 +16,23 @@
 
 !SLIDE bullets
 
-* **"The best way to predict the future is to invent it."** *- Alan Kay*
+* "When you don't create things, you become defined by your tastes rather than
+  ability. Your tastes only narrow and exclude people. So create."
 
-!SLIDE bullets
-
-* **"When you don't create things, you become defined by your tastes rather than
-  ability. Your tastes only narrow and exclude people. So create."** *- why the
-  lucky stiff*
+* *why the lucky stiff*
 
 !SLIDE center
 # Why a programming language? #
+
+!SLIDE bullets
+
+* About programming languages:
+
+* "I don’t like any of them, and I don’t think any
+  of them are suitable for the real programming problems of today, whether for
+  systems or for end-users"
+
+* *Alan Kay*
 
 !SLIDE bullets
 # Problem Oriented Programming Languages #
