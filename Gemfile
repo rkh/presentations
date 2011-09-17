@@ -3,6 +3,7 @@ source :rubygems unless ENV['QUICK']
 group :slides do
   gem 'showoff'
   gem 'rmagick'
+  gem 'pdfkit'
 end
 
 group :demo do

@@ -1,5 +1,5 @@
 !SLIDE title bullets
-# will be replaced by title #
+# Smalltalk On Rubinius #
 
 * Konstantin Haase
 
