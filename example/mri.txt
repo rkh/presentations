@@ -1,0 +1,12 @@
+puts RubyVM::InstructionSequence.new(File.read('example.rb')).disasm
+== disasm: <RubyVM::InstructionSequence:ultimate_answer?@<compiled>>====
+local table (size: 2, argc: 1 [opts: 0, rest: -1, post: 0, block: -1] s1)
+[ 2] value<Arg> 
+0000 trace            8                                               (   2)
+0002 trace            1                                               (   3)
+0004 getlocal         value
+0006 send             :to_s, 0, nil, 0, <ic:0>
+0012 putstring        "42"
+0014 opt_eq           <ic:2>
+0016 trace            16                                              (   4)
+0018 leave
