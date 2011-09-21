@@ -1,56 +1,57 @@
 ################################### JVM 6 ###################################
 ruby --bytecode example.rb 
 
-  public static method__1$RUBY$ultimate_answer_p_(Lexample;Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/Block;)Lorg/jruby/runtime/builtin/IRubyObject;
-  @Lorg/jruby/anno/JRubyMethod;(name="ultimate_answer?", frame=true, required=1, optional=0, rest=-1)
-    ALOAD 3
-    ASTORE 9
-   L0
-    LINENUMBER 3 L0
-    ALOAD 0
-    INVOKEVIRTUAL example.getCallSite0 ()Lorg/jruby/runtime/CallSite;
-    ALOAD 1
-    ALOAD 2
-    ALOAD 0
-    INVOKEVIRTUAL example.getCallSite1 ()Lorg/jruby/runtime/CallSite;
-    ALOAD 1
-    ALOAD 2
-    ALOAD 9
-    INVOKEVIRTUAL org/jruby/runtime/CallSite.call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject;
-    ALOAD 0
-    ALOAD 1
-    GETFIELD org/jruby/runtime/ThreadContext.runtime : Lorg/jruby/Ruby;
-    BIPUSH 32
-    INVOKEVIRTUAL example.getString0 (Lorg/jruby/Ruby;I)Lorg/jruby/RubyString;
-    INVOKEVIRTUAL org/jruby/runtime/CallSite.call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject;
-    ARETURN
-   L1
-    LOCALVARIABLE value Lorg/jruby/runtime/builtin/IRubyObject; L0 L1 9
-    MAXSTACK = 7
-    MAXLOCALS = 10
+public static method__1$RUBY$ultimate_answer_p_(Lexample;Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/Block;)Lorg/jruby/runtime/builtin/IRubyObject;
+@Lorg/jruby/anno/JRubyMethod;(name="ultimate_answer?", frame=true, required=1, optional=0, rest=-1)
+  ALOAD 3
+  ASTORE 9
+ L0
+  LINENUMBER 3 L0
+  ALOAD 0
+  INVOKEVIRTUAL example.getCallSite0 ()Lorg/jruby/runtime/CallSite;
+  ALOAD 1
+  ALOAD 2
+  ALOAD 0
+  INVOKEVIRTUAL example.getCallSite1 ()Lorg/jruby/runtime/CallSite;
+  ALOAD 1
+  ALOAD 2
+  ALOAD 9
+  INVOKEVIRTUAL org/jruby/runtime/CallSite.call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject;
+  ALOAD 0
+  ALOAD 1
+  GETFIELD org/jruby/runtime/ThreadContext.runtime : Lorg/jruby/Ruby;
+  BIPUSH 32
+  INVOKEVIRTUAL example.getString0 (Lorg/jruby/Ruby;I)Lorg/jruby/RubyString;
+  INVOKEVIRTUAL org/jruby/runtime/CallSite.call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject;
+  ARETURN
+ L1
+  LOCALVARIABLE value Lorg/jruby/runtime/builtin/IRubyObject; L0 L1 9
+  MAXSTACK = 7
+  MAXLOCALS = 10
 
 ################################### JVM 7 ###################################
+ruby --bytecode example.rb
 
-    public static method__1$RUBY$ultimate_answer_p_(Lexample;Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/Block;)Lorg/jruby/runtime/builtin/IRubyObject;
-    @Lorg/jruby/anno/JRubyMethod;(name="ultimate_answer?", frame=true, required=1, optional=0, rest=-1)
-      ALOAD 3
-      ASTORE 9
-     L0
-      LINENUMBER 3 L0
-      ALOAD 1
-      ALOAD 2
-      ALOAD 1
-      ALOAD 2
-      ALOAD 9
-      LDC "to_s"
-      INVOKEDYNAMIC call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Ljava/lang/String;)Lorg/jruby/runtime/builtin/IRubyObject; [org/jruby/runtime/invokedynamic/InvocationLinker.invocationBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; (6)]
-      LDC "=="
-      ALOAD 1
-      INVOKEDYNAMIC getString (Lorg/jruby/runtime/ThreadContext;)Lorg/jruby/RubyString; [org/jruby/runtime/invokedynamic/InvokeDynamicSupport.getStringBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/invoke/CallSite; (6), "42", "ASCII-8BIT", 32]
-      INVOKEDYNAMIC call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Ljava/lang/String;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject; [org/jruby/runtime/invokedynamic/InvocationLinker.invocationBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; (6)]
-      ARETURN
-     L1
-      LOCALVARIABLE value Lorg/jruby/runtime/builtin/IRubyObject; L0 L1 9
-      MAXSTACK = 6
-      MAXLOCALS = 10
+public static method__1$RUBY$ultimate_answer_p_(Lexample;Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/Block;)Lorg/jruby/runtime/builtin/IRubyObject;
+@Lorg/jruby/anno/JRubyMethod;(name="ultimate_answer?", frame=true, required=1, optional=0, rest=-1)
+  ALOAD 3
+  ASTORE 9
+ L0
+  LINENUMBER 3 L0
+  ALOAD 1
+  ALOAD 2
+  ALOAD 1
+  ALOAD 2
+  ALOAD 9
+  LDC "to_s"
+  INVOKEDYNAMIC call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Ljava/lang/String;)Lorg/jruby/runtime/builtin/IRubyObject; [org/jruby/runtime/invokedynamic/InvocationLinker.invocationBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; (6)]
+  LDC "=="
+  ALOAD 1
+  INVOKEDYNAMIC getString (Lorg/jruby/runtime/ThreadContext;)Lorg/jruby/RubyString; [org/jruby/runtime/invokedynamic/InvokeDynamicSupport.getStringBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/invoke/CallSite; (6), "42", "ASCII-8BIT", 32]
+  INVOKEDYNAMIC call (Lorg/jruby/runtime/ThreadContext;Lorg/jruby/runtime/builtin/IRubyObject;Lorg/jruby/runtime/builtin/IRubyObject;Ljava/lang/String;Lorg/jruby/runtime/builtin/IRubyObject;)Lorg/jruby/runtime/builtin/IRubyObject; [org/jruby/runtime/invokedynamic/InvocationLinker.invocationBootstrap(Ljava/lang/invoke/MethodHandles$Lookup;Ljava/lang/String;Ljava/lang/invoke/MethodType;)Ljava/lang/invoke/CallSite; (6)]
+  ARETURN
+ L1
+  LOCALVARIABLE value Lorg/jruby/runtime/builtin/IRubyObject; L0 L1 9
+  MAXSTACK = 6
+  MAXLOCALS = 10
 
