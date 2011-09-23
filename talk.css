@@ -85,19 +85,28 @@ body {
 .slide .small {
   font-size: 50%;
 }
-/* line 50, talk.sass */
+/* line 49, talk.sass */
+.slide .gh img {
+  position: relative;
+  left: -20px;
+}
+/* line 54, talk.sass */
+.slide .hiddentitle h1, .slide .hiddentitle h2, .slide .hiddentitle h3, .slide .hiddentitle h4, .slide .hiddentitle h5, .slide .hiddentitle h6 {
+  display: none;
+}
+/* line 57, talk.sass */
 .slide .smallish {
   font-size: 80%;
 }
-/* line 53, talk.sass */
+/* line 60, talk.sass */
 .slide .large {
   font-size: 200%;
 }
-/* line 57, talk.sass */
+/* line 64, talk.sass */
 .slide .spaced .sh_smalltalk {
   margin-bottom: 2em;
 }
-/* line 60, talk.sass */
+/* line 67, talk.sass */
 .slide [alt~=stack] {
   position: absolute;
   width: 249px;
@@ -105,7 +114,7 @@ body {
   right: 5px;
   top: 0;
 }
-/* line 67, talk.sass */
+/* line 74, talk.sass */
 .slide [alt~=working_code], .slide [alt~=pseudo_code] {
   position: absolute;
   right: 0;
