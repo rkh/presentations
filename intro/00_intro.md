@@ -9,7 +9,7 @@
 # Thanks EY #
 ![Engine Yard](engine_yard_logo.jpg)
 
-!SLIDE center hiddentitle
+!SLIDE center hiddentitle gh
 # Me #
 ![rkh](rkh.png)
 
