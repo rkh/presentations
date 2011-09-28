@@ -55,3 +55,8 @@
     64        string_dup            [ "42", "42" ]
     83 2      meta_send_op_equal    [ true       ]
     11        ret                   [            ]
+
+!SLIDE
+
+![rbc](rbc.png)
+
