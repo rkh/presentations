@@ -11,18 +11,24 @@
 
 * [github.com / rkh / presentations](https://github.com/rkh/presentations)
 
+!SLIDE
+
+# Ruby
+![Ruby](ruby.jpg)
+
 !SLIDE small
 ![Rubies](rubies.png)
 
 !SLIDE bullets incremental
 
+# What We'll Look Into
+
+* **MRI**: method dispatch and execution
+* **Rubinius**: inline caches and JIT
+* **JRuby**: invokedynamic
+
 !SLIDE
 ![Thanks Koichi, Brian and Charles](help.png)
-
-!SLIDE
-
-# Ruby
-![Ruby](ruby.jpg)
 
 !SLIDE large
 
