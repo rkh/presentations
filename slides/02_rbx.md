@@ -1,3 +1,13 @@
+!SLIDE
+
+# Rubinius
+
+[ image ]
+
+!SLIDE
+
+![Rubinius::MethodTable](methodtable.png)
+
 !SLIDE smallish
 
     @@@ ruby
