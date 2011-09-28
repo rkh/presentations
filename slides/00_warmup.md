@@ -101,7 +101,7 @@
 
 # Speed Up Search
 
-* Call Site Cache
+* Inline Cache (aka Call/Send Site Cache)
 * Lookup Cache
 * Inlining
 
