@@ -1,3 +1,14 @@
+!SLIDE smallish
+
+    @@@ ruby
+    klass  = object.singleton_class
+    method = nil
+
+    while klass and not method
+      method = klass.method_table.lookup(:some_method)
+      klass  = klass.direct_superclass
+    end
+
 !SLIDE ruby commandline incremental
 
     >> cm = DeepThought.method_table \
@@ -18,6 +29,8 @@
     
     >> cm.literals
     => #<Rubinius::Tuple: :to_s, "42", :==>
+
+.notes compiled method, decode, opcodes, literals
 
 !SLIDE smallish
 
