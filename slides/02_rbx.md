@@ -60,3 +60,15 @@
 
 ![rbc](rbc.png)
 
+!SLIDE
+![InlineCache](inlinecache.png)
+
+!SLIDE bullets incremental
+# Specialized Methods
+* cached bytecode
+* code with breakpoints
+* specialized for arguments
+* JITed code
+
+!SLIDE
+![LLVM](llvm.png)
