@@ -1,8 +1,7 @@
 !SLIDE
 
 # Rubinius
-
-[ image ]
+![Rubinius](rubinius.png)
 
 !SLIDE
 
@@ -60,8 +59,24 @@
 
 ![rbc](rbc.png)
 
+!SLIDE small
+
+    @@@ cpp
+    instruction send_stack(literal count) [ receiver +count -- value ] => send
+      Object* recv = stack_back(count);
+      InlineCache* cache = reinterpret_cast<InlineCache*>(literal);
+
+      Arguments args(cache->name, recv, Qnil, count, stack_back_position(count));
+
+      Object* ret = cache->execute(state, call_frame, args);
+      CHECK_AND_PUSH(ret);
+    end
+
 !SLIDE
 ![InlineCache](inlinecache.png)
+
+!SLIDE
+![Change](change.png)
 
 !SLIDE bullets incremental
 # Specialized Methods

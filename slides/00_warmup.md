@@ -16,6 +16,12 @@
 # Ruby
 ![Ruby](ruby.jpg)
 
+!SLIDE
+![Message In A Bottle](bottle.jpg)
+
+!SLIDE
+![Warning](warning.jpg)
+
 !SLIDE small
 ![Rubies](rubies.png)
 
@@ -30,9 +36,8 @@
 !SLIDE
 ![Thanks Koichi, Brian and Charles](help.png)
 
-!SLIDE large
-
-# 42
+!SLIDE
+![42](42.png)
 
 !SLIDE
 

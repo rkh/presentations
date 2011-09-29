@@ -5,6 +5,8 @@
 
 !SLIDE bullets
 
+![call](call.jpg)
+
 * a method gets called
 * `rb_call0`
 
@@ -25,6 +27,9 @@
         stack_check();
         return vm_call0(th, recv, mid, argc, argv, me);               // <- EXECUTE
     }
+
+!SLIDE
+![Search](search.jpg)
 
 !SLIDE small
 
@@ -52,6 +57,9 @@
 
         return (rb_method_entry_t *)body;
     }
+
+!SLIDE
+![run](run.jpg)
 
 !SLIDE small
 
@@ -91,6 +99,9 @@
     {
       // ... go see for yourself ...
     }
+
+!SLIDE
+![instruction](instruction.jpg)
 
 !SLIDE small
 
