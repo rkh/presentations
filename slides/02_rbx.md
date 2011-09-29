@@ -3,9 +3,13 @@
 # Rubinius
 ![Rubinius](rubinius.png)
 
+.notes Next Up: method table
+
 !SLIDE
 
 ![Rubinius::MethodTable](methodtable.png)
+
+.notes Next Up: lookup in ruby
 
 !SLIDE smallish
 
@@ -17,6 +21,8 @@
       method = klass.method_table.lookup(:some_method)
       klass  = klass.direct_superclass
     end
+
+.notes Next Up: decode method in irb
 
 !SLIDE ruby commandline incremental
 
@@ -40,6 +46,7 @@
     => #<Rubinius::Tuple: :to_s, "42", :==>
 
 .notes compiled method, decode, opcodes, literals
+Next Up: walk through bytecode
 
 !SLIDE smallish
 
@@ -55,9 +62,13 @@
     83 2      meta_send_op_equal    [ true       ]
     11        ret                   [            ]
 
+.notes Next Up: rbc place inline chace
+
 !SLIDE
 
 ![rbc](rbc.png)
+
+.notes Next Up: cast to inline cache
 
 !SLIDE small
 
@@ -72,11 +83,17 @@
       CHECK_AND_PUSH(ret);
     end
 
+.notes Next Up: inline cache uml
+
 !SLIDE
 ![InlineCache](inlinecache.png)
 
+.notes Next Up: change
+
 !SLIDE
 ![Change](change.png)
+
+.notes Next Up: Specialized Methods
 
 !SLIDE bullets incremental
 # Specialized Methods
@@ -85,5 +102,9 @@
 * specialized for arguments
 * JITed code
 
+.notes cached, debugger, args, JITed code. Next Up: llvm
+
 !SLIDE
 ![LLVM](llvm.png)
+
+.notes Next Up: JRuby

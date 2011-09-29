@@ -3,12 +3,16 @@
 # MRI
 ![MRI](mri.jpg)
 
+.notes Next Up: call
+
 !SLIDE bullets
 
 ![call](call.jpg)
 
 * a method gets called
 * `rb_call0`
+
+.notes Next Up: rb_call0
 
 !SLIDE small
 
@@ -28,8 +32,12 @@
         return vm_call0(th, recv, mid, argc, argv, me);               // <- EXECUTE
     }
 
+.notes Next Up: search
+
 !SLIDE
 ![Search](search.jpg)
+
+.notes Next Up: search\_method
 
 !SLIDE small
 
@@ -58,8 +66,12 @@
         return (rb_method_entry_t *)body;
     }
 
+.notes Next Up: run
+
 !SLIDE
 ![run](run.jpg)
+
+.notes Next Up: vm_call0
 
 !SLIDE small
 
@@ -91,6 +103,8 @@
       // ...
     }
 
+.notes Next Up: vm_exec
+
 !SLIDE small
 
     @@@ c
@@ -100,8 +114,12 @@
       // ... go see for yourself ...
     }
 
+.notes Next Up: instruction
+
 !SLIDE
 ![instruction](instruction.jpg)
+
+.notes Next Up: DEFINE_INSN send
 
 !SLIDE small
 
@@ -127,3 +145,5 @@
         me = vm_method_search(id, klass, ic);
         CALL_METHOD(num, blockptr, flag, id, me, recv);
     }
+
+.notes Next Up: Rubinius

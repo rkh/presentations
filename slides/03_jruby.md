@@ -2,8 +2,12 @@
 # JRuby
 ![JRuby](jruby.jpg)
 
+.notes Next Up: indy
+
 !SLIDE
 ![indy](indy.jpg)
+
+.notes Next Up: context
 
 !SLIDE smallish
 
@@ -22,6 +26,8 @@
     ALOAD 9
     INVOKEDYNAMIC call ...
 
+.notes Next Up: the call
+
 !SLIDE smallish
 
 ## INVOKEVIRTUAL
@@ -31,8 +37,6 @@
         Lorg/jruby/runtime/builtin/IRubyObject;
         Lorg/jruby/runtime/builtin/IRubyObject;
       )Lorg/jruby/runtime/builtin/IRubyObject;
-
-.notes context, caller, self
 
 ## INVOKEDYNAMIC
 
@@ -45,6 +49,7 @@
       [...]
 
 .notes context, caller, self, method name
+Next Up: Linking
 
 !SLIDE smallish
 
@@ -57,8 +62,12 @@
           Ljava/lang/invoke/MethodType;
         )Ljava/lang/invoke/CallSite;]
 
+.notes Next Up: boots
+
 !SLIDE
 ![bootstrap](bootstrapping.jpg)
+
+.notes Next Up: bootstrap
 
 !SLIDE small
 
@@ -79,8 +88,12 @@
       return site;
     }
 
+.notes Next Up: fallback image
+
 !SLIDE
 ![fallback](fallback.jpg)
+
+.notes Next Up: fallback
 
 !SLIDE small
 
@@ -104,3 +117,5 @@
 
       return (IRubyObject)target.invokeWithArguments(context, caller, self, name);
     }
+
+.notes Next Up: refs
