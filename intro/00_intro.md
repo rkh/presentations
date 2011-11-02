@@ -1,5 +1,5 @@
 !SLIDE title bullets
-# will be replaced by title #
+# Real Time Rack #
 
 * Konstantin Haase
 
