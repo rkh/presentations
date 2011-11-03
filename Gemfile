@@ -8,7 +8,7 @@ end
 
 group :demo do
   gem 'thin'
-  gem 'sinatra', '~> 1.2.6'
+  gem 'sinatra'
   gem 'escape_utils'
   gem 'capture_stdout'
   gem 'slim'
