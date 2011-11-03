@@ -36,7 +36,7 @@
 
 # Demo! #
 
-## Not available in PDF ##
+<iframe src="/events?" width="980" height="600"></iframe>
 
 !SLIDE bullets
 
