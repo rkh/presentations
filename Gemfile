@@ -1,7 +1,7 @@
 source :rubygems unless ENV['QUICK']
 
 group :slides do
-  gem 'showoff'
+  gem 'showoff', :git => 'https://github.com/schacon/showoff'
   gem 'rmagick'
   gem 'pdfkit'
 end
