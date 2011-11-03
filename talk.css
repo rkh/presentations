@@ -98,6 +98,16 @@ body {
   margin-bottom: 2em;
 }
 /* line 60, talk.sass */
+.slide .highlight {
+  color: #cccccc;
+}
+/* line 62, talk.sass */
+.slide .highlight b, .slide .highlight em, .slide .highlight strong {
+  color: black;
+  font-weight: normal;
+  background-color: #ffffaa;
+}
+/* line 67, talk.sass */
 .slide [alt~=stack] {
   position: absolute;
   width: 249px;
@@ -105,7 +115,7 @@ body {
   right: 5px;
   top: 0;
 }
-/* line 67, talk.sass */
+/* line 74, talk.sass */
 .slide [alt~=working_code], .slide [alt~=pseudo_code] {
   position: absolute;
   right: 0;
