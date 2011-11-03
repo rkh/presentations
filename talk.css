@@ -86,10 +86,14 @@ body {
   font-size: 50%;
 }
 /* line 49, talk.sass */
+.slide .smallish {
+  font-size: 90%;
+}
+/* line 52, talk.sass */
 .slide .large {
   font-size: 200%;
 }
-/* line 52, talk.sass */
+/* line 55, talk.sass */
 .slide [alt~=stack] {
   position: absolute;
   width: 249px;
@@ -97,7 +101,7 @@ body {
   right: 5px;
   top: 0;
 }
-/* line 59, talk.sass */
+/* line 62, talk.sass */
 .slide [alt~=working_code], .slide [alt~=pseudo_code] {
   position: absolute;
   right: 0;

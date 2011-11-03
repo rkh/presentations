@@ -3,21 +3,34 @@
 
 * Konstantin Haase
 
+.notes Next: EY
+
 !SLIDE center
 ![Engine Yard](engine_yard_logo.jpg)
+
+.notes Next: me
 
 !SLIDE center
 ![rkh](rkh.png)
 
+.notes Next: Sinatra
+
 !SLIDE center
 ![sinatra](sinatra1.png)
+
+.notes Next: Book
 
 !SLIDE center
 ![sinatra](sinatra2.png)
 
+.notes Next: Rack
+
 !SLIDE center
 ![rack](rack.png)
+
+.notes Next: Rubinius
 
 !SLIDE center
 ![rubinius](rubinius.png)
 
+.notes Next: talk
