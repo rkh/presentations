@@ -102,7 +102,7 @@ body {
   color: #cccccc;
 }
 /* line 62, talk.sass */
-.slide .highlight b, .slide .highlight em, .slide .highlight strong {
+.slide .highlight b, .slide .highlight strong {
   color: black;
   font-weight: normal;
   background-color: #ffffaa;
