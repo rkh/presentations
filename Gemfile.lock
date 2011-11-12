@@ -1,54 +1,66 @@
+GIT
+  remote: https://github.com/schacon/showoff
+  revision: 335e142e4a2f8c17c3e1d0ec67d708c45b82ba3b
+  specs:
+    showoff (0.7.0)
+      bluecloth
+      gli (>= 1.3.2)
+      json
+      nokogiri
+      parslet
+      sinatra
+
 GEM
   remote: http://rubygems.org/
   specs:
-    bluecloth (2.1.0)
+    blankslate (2.1.2.4)
+    bluecloth (2.2.0)
     capture_stdout (0.0.1)
-    chunky_png (1.2.0)
+    chunky_png (1.2.5)
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.1.1)
+    coffee-script-source (1.1.3)
     compass (0.11.5)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
       sass (~> 3.1)
     daemons (1.1.4)
-    escape_utils (0.2.3)
+    escape_utils (0.2.4)
     eventmachine (0.12.10)
-    execjs (1.2.0)
+    execjs (1.2.9)
       multi_json (~> 1.0)
-    foreman (0.19.0)
+    foreman (0.26.1)
       term-ansicolor (~> 1.0.5)
       thor (>= 0.13.6)
     fssm (0.2.7)
-    gli (1.3.2)
-    json (1.5.3)
+    gli (1.3.5)
+    json (1.6.1)
     multi_json (1.0.3)
     nokogiri (1.5.0)
+    parslet (1.2.3)
+      blankslate (~> 2.0)
     pdfkit (0.5.2)
-    rack (1.3.0)
+    rack (1.3.5)
+    rack-protection (1.1.4)
+      rack
     rmagick (2.13.1)
-    sass (3.1.4)
-    showoff (0.4.2)
-      bluecloth
-      gli (>= 1.2.5)
-      json
-      nokogiri
-      sinatra
-    sinatra (1.2.6)
-      rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
-    slim (0.9.4)
-      temple (~> 0.3.0)
-      tilt (~> 1.2)
-    temple (0.3.2)
-    term-ansicolor (1.0.5)
-    thin (1.2.11)
+    sass (3.1.10)
+    sinatra (1.3.1)
+      rack (>= 1.3.4, ~> 1.3)
+      rack-protection (>= 1.1.2, ~> 1.1)
+      tilt (>= 1.3.3, ~> 1.3)
+    slim (1.0.4)
+      temple (~> 0.3.4)
+      tilt (~> 1.3.2)
+    temple (0.3.4)
+    term-ansicolor (1.0.7)
+    thin (1.3.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
       rack (>= 1.0.0)
     thor (0.14.6)
-    tilt (1.3.2)
+    tilt (1.3.3)
 
 PLATFORMS
   ruby
@@ -62,7 +74,7 @@ DEPENDENCIES
   pdfkit
   rmagick
   sass
-  showoff
-  sinatra (~> 1.2.6)
+  showoff!
+  sinatra
   slim
   thin

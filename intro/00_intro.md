@@ -1,5 +1,5 @@
 !SLIDE title bullets
-# Smalltalk On Rubinius #
+# No Title #
 
 * Konstantin Haase
 
