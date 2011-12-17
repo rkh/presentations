@@ -3,11 +3,6 @@
 
 * Konstantin Haase
 
-.notes Next: EY
-
-!SLIDE center
-![Engine Yard](engine_yard_logo.jpg)
-
 .notes Next: me
 
 !SLIDE center
