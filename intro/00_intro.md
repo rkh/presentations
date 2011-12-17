@@ -6,26 +6,16 @@
 .notes Next: me
 
 !SLIDE center
-![rkh](rkh.png)
+![rkh](me.png)
 
-.notes Next: Sinatra
+.notes Next: Open Source
 
 !SLIDE center
-![sinatra](sinatra1.png)
+![sinatra](oss.png)
 
 .notes Next: Book
 
 !SLIDE center
-![sinatra](sinatra2.png)
-
-.notes Next: Rack
-
-!SLIDE center
-![rack](rack.png)
-
-.notes Next: Rubinius
-
-!SLIDE center
-![rubinius](rubinius.png)
+![sinatra](book.png)
 
 .notes Next: talk

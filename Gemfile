@@ -4,6 +4,7 @@ group :slides do
   gem 'showoff', :git => 'https://github.com/schacon/showoff'
   gem 'rmagick'
   gem 'pdfkit'
+  gem 'parslet'
 end
 
 group :demo do
