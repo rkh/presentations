@@ -2,6 +2,15 @@
 
 * ![breaking](breaking.png)
 
+.notes Next: Warning
+
+!SLIDE bullets incremental
+
+# Warning
+* There will be a lot of code ...
+* A lot!
+* Also, this is the *Special Extended Director's Cut*!
+
 .notes Next: good old web
 
 !SLIDE center
