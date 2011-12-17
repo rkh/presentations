@@ -143,7 +143,7 @@
 ![stack](middleware.png)
 
     @@@ ruby
-    # <p>foo</p> => <P>FOO</P>
+    # foo => FOO
     class UpperCase
       def initialize(app)
         @app = app
