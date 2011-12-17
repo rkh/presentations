@@ -898,4 +898,70 @@
       "message sent"
     end
 
+.notes  Next: sinatra chat
+!SLIDE bullets
+
+* Let's build a Chat!
+* Code: [gist.github.com/1476463](https://gist.github.com/1476463)
+* Demo: [sharp-night-9421.herokuapp.com](http://sharp-night-9421.herokuapp.com/)
+
+.notes Next: go there now
+
+!SLIDE bullets
+
+* Yes, go there now!
+* Here's the link again:<br>[**sharp-night-9421.herokuapp.com**](http://sharp-night-9421.herokuapp.com/)
+* Yes, there is no CSS. Sorry.
+
+.notes Next: demo
+
+!SLIDE
+## [**sharp-night-9421.herokuapp.com**](http://sharp-night-9421.herokuapp.com/)
+<iframe src="http://sharp-night-9421.herokuapp.com/?showoff=1" width="980" height="600"></iframe>
+
+.notes Next: code
+
+!SLIDE small
+
+## Ruby Code
+
+    @@@ ruby
+    set server: 'thin', connections: []
+
+    get '/stream', provides: 'text/event-stream' do
+      stream :keep_open do |out|
+        settings.connections << out
+        out.callback { settings.connections.delete(out) }
+      end
+    end
+
+    post '/' do
+      settings.connections.each { |out| out << "data: #{params[:msg]}\n\n" }
+      204 # response without entity body
+    end
+
+## JavaScript Code
+
+    @@@ javascript
+    var es = new EventSource('/stream');
+    es.onmessage = function(e) { $('#chat').append(e.data) };
+
+    $("form").live("submit", function(e) {
+      $.post('/', {msg: "<%= params[:user] %>: " + $('#msg').val()});
+      e.preventDefault();
+    });
+    
+## HTML
+
+    @@@ html
+    <pre id='chat'></pre> <form><input id='msg' /></form>
+
+Code: [**gist.github.com/1476463**](https://gist.github.com/1476463) -
+Demo: [**sharp-night-9421.herokuapp.com**](http://sharp-night-9421.herokuapp.com/)
+
+.notes Next: javascript
+
+!SLIDE small
+
+
 .notes Next: done
