@@ -1,23 +1,33 @@
 !SLIDE title bullets
-# No Title #
+# Sinatra #
 
-* Konstantin Haase
+## Past, Present and Future ##
 
-!SLIDE center
-![Engine Yard](engine_yard_logo.jpg)
+### Konstantin Haase ###
 
-!SLIDE center
-![rkh](rkh.png)
+!SLIDE bullets incremental
 
-!SLIDE center
-![sinatra](sinatra1.png)
+* Hi!
+* I'm Konstantin.
+* I write code.
 
-!SLIDE center
-![sinatra](sinatra2.png)
+!SLIDE bullets incremental
 
-!SLIDE center
-![rack](rack.png)
+### Random people on the internet know me for:
 
-!SLIDE center
-![rubinius](rubinius.png)
+* Sinatra
+* Travis
+* Rack
+* Rubinius
+* Much more...
+
+!SLIDE bullets incremental
+
+### Back in the internet, I'm aka'ed as
+
+* @konstantinhaase on Titter
+* rkh on GitHub
+* khaase on IRC
+* rkh.im on DNS
+
 
