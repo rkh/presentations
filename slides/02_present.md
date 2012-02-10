@@ -2,6 +2,8 @@
 
 # The Present
 
+![today](today.jpg)
+
 !SLIDE bullets incremental
 
 # Who's using it?

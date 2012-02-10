@@ -19,6 +19,8 @@
 ## 1993
 # CGI
 
+![cgi](cgi.gif)
+
 !SLIDE
 
     @@@ perl
@@ -45,6 +47,8 @@
 ## December 21, 1995
 # Ruby 0.95
 
+![ruby](ruby.png)
+
 !SLIDE
 
     @@@ ruby
@@ -59,6 +63,8 @@
 !SLIDE
 
 # Servlets
+
+![servlets](servlets.gif)
 
 !SLIDE
 
@@ -83,6 +89,8 @@
 
 ## July 2004
 # Ruby On Rails
+
+![rails](rails.png)
 
 !SLIDE bullets incremental
 
@@ -109,8 +117,6 @@
 ## Summer 2005
 # I discover Ruby! Woohoo!
 
-!SLIDE
-
 ![foxes](foxes.png)
 
 !SLIDE
@@ -122,6 +128,8 @@
 
 ## March 2007
 # Rack 0.1
+
+![rack](rack.png)
 
 !SLIDE
 
@@ -149,8 +157,6 @@
 
 ## September 9, 2007
 # Sinatra 0.0.1
-
-!SLIDE
 
 ![blake](blake.jpg)
 
@@ -298,6 +304,8 @@
 
 ## April - September 2010
 # Maintainance crisis
+
+![crisis](crisis.jpg)
 
 !SLIDE
 

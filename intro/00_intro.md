@@ -13,21 +13,23 @@
 
 !SLIDE bullets incremental
 
-### Random people on the internet know me for:
+![oss](oss.png)
 
-* Sinatra
-* Travis
-* Rack
-* Rubinius
-* Much more...
+!SLIDE bullets incremental
+
+![book](book.png)
+
+!SLIDE bullets incremental
+
+![travis-love](travis-love.png)
 
 !SLIDE bullets incremental
 
 ### Back in the internet, I'm aka'ed as
 
-* @konstantinhaase on Titter
-* rkh on GitHub
-* khaase on IRC
-* rkh.im on DNS
+* **@konstantinhaase** on Titter
+* **rkh** on GitHub
+* **khaase** on IRC
+* **rkh.im** on DNS
 
 

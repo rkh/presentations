@@ -2,6 +2,8 @@
 
 # The Future
 
+![future](future.jpg)
+
 !SLIDE
 
 ## 2012
