@@ -3,21 +3,21 @@
 
 * Konstantin Haase
 
-!SLIDE center
-![Engine Yard](engine_yard_logo.jpg)
+!SLIDE title bullets
+# <s>Message In A Bottle</s> #
+
+* Konstantin Haase
+
+!SLIDE title bullets
+# Something About Pull Requests #
+
+* Konstantin Haase
 
 !SLIDE center
-![rkh](rkh.png)
+![Sinatra](sinatra.png)
 
 !SLIDE center
-![sinatra](sinatra1.png)
+![Sinatra: Up And Running](book.png)
 
 !SLIDE center
-![sinatra](sinatra2.png)
-
-!SLIDE center
-![rack](rack.png)
-
-!SLIDE center
-![rubinius](rubinius.png)
-
+![Travis CI](travis.png)
