@@ -52,6 +52,84 @@
 		<dict>
 			<key>Class</key>
 			<string>LineGraphic</string>
+			<key>ID</key>
+			<integer>33781</integer>
+			<key>Points</key>
+			<array>
+				<string>{76, 140}</string>
+				<string>{61.5, 231}</string>
+				<string>{184, 263.5}</string>
+				<string>{274, 259}</string>
+				<string>{284, 233.5}</string>
+				<string>{337, 233.5}</string>
+				<string>{350, 251}</string>
+				<string>{447, 204}</string>
+				<string>{452, 178.5}</string>
+				<string>{444, 153.5}</string>
+				<string>{461, 138}</string>
+				<string>{467, 88}</string>
+				<string>{460, 59}</string>
+				<string>{391, 67.5}</string>
+				<string>{405.5, 148}</string>
+				<string>{405.5, 180}</string>
+				<string>{405.5, 201}</string>
+				<string>{351, 201}</string>
+				<string>{324, 178.5}</string>
+				<string>{287, 184}</string>
+				<string>{278, 207}</string>
+				<string>{140, 213}</string>
+				<string>{115.5, 188}</string>
+				<string>{100, 139}</string>
+			</array>
+			<key>Style</key>
+			<dict>
+				<key>shadow</key>
+				<dict>
+					<key>Beneath</key>
+					<string>YES</string>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0</string>
+						<key>g</key>
+						<string>0</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+					<key>Draws</key>
+					<string>YES</string>
+					<key>Fuzziness</key>
+					<real>4.300992488861084</real>
+					<key>ShadowVector</key>
+					<string>{2, 2}</string>
+				</dict>
+				<key>stroke</key>
+				<dict>
+					<key>Cap</key>
+					<integer>2</integer>
+					<key>Color</key>
+					<dict>
+						<key>b</key>
+						<string>0.208221</string>
+						<key>g</key>
+						<string>0.80611</string>
+						<key>r</key>
+						<string>0</string>
+					</dict>
+					<key>HeadArrow</key>
+					<string>FilledArrow</string>
+					<key>LineType</key>
+					<integer>1</integer>
+					<key>TailArrow</key>
+					<string>0</string>
+					<key>Width</key>
+					<real>5</real>
+				</dict>
+			</dict>
+		</dict>
+		<dict>
+			<key>Class</key>
+			<string>LineGraphic</string>
 			<key>Head</key>
 			<dict>
 				<key>ID</key>
@@ -59,6 +137,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33777</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{88.5, 132.5}</string>
@@ -92,10 +172,12 @@
 			</dict>
 			<key>ID</key>
 			<integer>33776</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{115.5, 83.505203}</string>
-				<string>{262.5, 83.533371}</string>
+				<string>{115.5, 83.500221}</string>
+				<string>{262.5, 83.501282}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -331,6 +413,8 @@
 			</array>
 			<key>ID</key>
 			<integer>20</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 		</dict>
 		<dict>
 			<key>Class</key>
@@ -342,10 +426,12 @@
 			</dict>
 			<key>ID</key>
 			<integer>33772</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{262.5, 193.50003}</string>
-				<string>{136.5, 193.50011}</string>
+				<string>{262.5, 193.5}</string>
+				<string>{136.5, 193.50002}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -375,6 +461,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33771</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{108.57655, 208.8031}</string>
@@ -406,6 +494,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33770</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -437,6 +527,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33769</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -484,10 +576,12 @@
 			</dict>
 			<key>ID</key>
 			<integer>33779</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{430.50143, 123}</string>
-				<string>{430.50363, 99}</string>
+				<string>{430.50021, 123}</string>
+				<string>{430.50058, 99}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -519,6 +613,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33767</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{310.5, 99}</string>
@@ -552,6 +648,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33765</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{430.5, 178.77254}</string>
@@ -585,6 +683,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33764</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{310.5, 178}</string>
@@ -618,10 +718,12 @@
 			</dict>
 			<key>ID</key>
 			<integer>33763</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
-				<string>{358.5, 193.4175}</string>
-				<string>{388.86322, 193.3653}</string>
+				<string>{358.5, 193.47093}</string>
+				<string>{389.00876, 193.45245}</string>
 			</array>
 			<key>Style</key>
 			<dict>
@@ -651,6 +753,8 @@
 			</dict>
 			<key>ID</key>
 			<integer>33762</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Points</key>
 			<array>
 				<string>{358.5, 248.31467}</string>
@@ -682,6 +786,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>10</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Magnets</key>
 			<array>
 				<string>{0, 1}</string>
@@ -713,6 +819,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33761</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -733,6 +841,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33778</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -753,6 +863,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33759</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -773,6 +885,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>33758</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -793,6 +907,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>1</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Text</key>
@@ -813,6 +929,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>9</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Cloud</string>
 			<key>Style</key>
@@ -837,6 +955,8 @@
 			<string>ShapedGraphic</string>
 			<key>ID</key>
 			<integer>4</integer>
+			<key>IsLocked</key>
+			<string>YES</string>
 			<key>Shape</key>
 			<string>Rectangle</string>
 			<key>Style</key>
@@ -896,7 +1016,7 @@
 	<key>MasterSheets</key>
 	<array/>
 	<key>ModificationDate</key>
-	<string>2012-04-18 09:20:51 +0000</string>
+	<string>2012-04-18 16:32:54 +0000</string>
 	<key>Modifier</key>
 	<string>Konstantin Haase</string>
 	<key>NotesVisible</key>

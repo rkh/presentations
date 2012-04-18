@@ -1,14 +1,14 @@
-!SLIDE title bullets
+!SLIDE bullets
 # Message In A Bottle #
 
 * Konstantin Haase
 
-!SLIDE title bullets
+!SLIDE bullets
 # <s>Message In A Bottle</s> #
 
 * Konstantin Haase
 
-!SLIDE title bullets
+!SLIDE bullets
 # Something About Pull Requests #
 
 * Konstantin Haase
