@@ -1,3 +1,7 @@
+!SLIDE center
+
+![...](josh_sven.jpg)
+
 !SLIDE bullets
 
 # Pull Requests #
@@ -53,7 +57,7 @@
 # We start the rollout today #
 
 * will enable it on per project basis
-* big and huge donors get priority
+* donors get priority (starting with huge and big donors)
 
 !SLIDE center
 

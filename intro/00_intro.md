@@ -14,6 +14,10 @@
 * Konstantin Haase
 
 !SLIDE center
+
+![miab](message.png)
+
+!SLIDE center
 ![Sinatra](sinatra.png)
 
 !SLIDE center
