@@ -36,6 +36,14 @@
 
 ![Pull Request](one-does-not-pull-request.jpg)
 
+!SLIDE bullets
+
+# Announcement #
+
+!SLIDE bullets
+
+# We are going to fix this! #
+
 !SLIDE center
 
 ![with travis](with-travis.png)
