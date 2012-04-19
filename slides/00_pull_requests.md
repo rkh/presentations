@@ -69,29 +69,48 @@
 
 !SLIDE center
 
+![how](how.jpg)
+
+!SLIDE center
+
+# `/repos/.../pulls/...`
+
 ![pull request api](pull-request-api.png)
 
 !SLIDE center
+
+
+# `/repos/.../refs/pull/...`
 
 ![pull request api](pull-refs.png)
 
 !SLIDE center
 
+# `/repos/.../refs/pull/...`
+
 ![pull request api](pull-refs-head.png)
 
 !SLIDE center
+
+# `/repos/.../refs/pull/...`
 
 ![pull request api](pull-refs-head-url.png)
 
 !SLIDE center
 
+# `/repos/.../refs/pull/...`
+
 ![pull request api](pull-refs-merge.png)
 
 !SLIDE center
 
+# `/repos/.../refs/pull/...`
+
 ![pull request api](pull-refs-merge-url.png)
 
 !SLIDE center
+
+# `/repos/.../refs/commits/...`
 
 ![pull request api](pull-refs-merge-committer.png)
 

@@ -8,6 +8,10 @@
 
 * Konstantin Haase
 
+!SLIDE center
+
+![miab](message.png)
+
 !SLIDE bullets
 # Something About Pull Requests #
 
@@ -15,9 +19,9 @@
 
 !SLIDE center
 
-![miab](message.png)
+# Sinatra
+## Rack, Rubinius, Tilt, ...
 
-!SLIDE center
 ![Sinatra](sinatra.png)
 
 !SLIDE center
