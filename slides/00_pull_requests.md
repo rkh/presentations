@@ -44,6 +44,17 @@
 
 # We are going to fix this! #
 
+!SLIDE bullets
+
+# We have fixed it! #
+
+!SLIDE bullets
+
+# We start the rollout today #
+
+* will enable it on per project basis
+* big and huge donors get priority
+
 !SLIDE center
 
 ![with travis](with-travis.png)
