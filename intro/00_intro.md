@@ -21,3 +21,7 @@
 
 !SLIDE center
 ![Travis CI](travis.png)
+
+!SLIDE center
+
+![josh](josh.jpg)

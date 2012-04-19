@@ -95,6 +95,10 @@
 
 !SLIDE center
 
+# Yet Another Github Library!?
+
+!SLIDE center
+
 ![gh](gh.png)
 
 !SLIDE center
@@ -116,7 +120,7 @@
 
     @@@ ruby
     GH.with username: 'rkh', password: 'x' do
-      GH['user]['name']
+      GH['user']['name']
     end
 
 !SLIDE code
@@ -154,7 +158,39 @@
 * If field does not exist, fetch data from self link
 * Do it lazily
 
+
+
+!SLIDE center
+
+# One More Thing
+
+!SLIDE
+
+    @@@ javascript
+
+    {
+      "action": "synchronize",
+      "pull_request": {
+        "base": { ... },
+        "head": { ... }
+      }
+    }
+
+!SLIDE bullets incremental
+
+* triggered if head updated
+* triggered if base updated
+
+!SLIDE center
+
+![end of world](endofworld.jpg)
+
+!SLIDE bullets
+
+* don't rebuild on base updates
+
 !SLIDE center
 
 ![do it live](doitlive.jpeg)
 
+!SLIDE center
