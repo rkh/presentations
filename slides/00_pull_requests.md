@@ -1,7 +1,3 @@
-!SLIDE center
-
-![...](josh_sven.jpg)
-
 !SLIDE bullets
 
 # Pull Requests #
