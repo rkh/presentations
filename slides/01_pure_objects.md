@@ -6,13 +6,13 @@
 
 !SLIDE bullets
 
-* Doesn't Ruby have that already?
+# Doesn't Ruby have that already?
 
 .notes Next: OOP != OOP
 
 !SLIDE bullets
 
-* OOP != OOP
+# OOP != OOP
 
 .notes Next: Simula
 
@@ -21,6 +21,12 @@
 * "Objects are data and functionality."
 
 * *Your high-school teacher*
+
+.notes Next: Alan Kay
+
+!SLIDE
+
+![Kay](kay.jpg)
 
 .notes Next: Kay about C++
 
@@ -54,10 +60,10 @@
 !SLIDE
 
     @@@ ruby
-    if respuesta == 42
-      "¡correcto!"
+    if response == 42
+      "correct!"
     else
-      "equivocado"
+      "wrong"
     end
 
 .notes Next: if smalltalk
@@ -65,9 +71,9 @@
 !SLIDE
 
     @@@ smalltalk
-    respuesta = 42
-      ifTrue:  [ '¡correcto!' ]
-      ifFalse: [ 'equivocado' ]
+    response = 42
+      ifTrue:  [ 'correct!' ]
+      ifFalse: [ 'wrong' ]
 
 .notes Next: if as method in ruby
 
@@ -95,7 +101,7 @@
 !SLIDE
 
     @@@ ruby
-    class Falso
+    class Falsy
       def if_true; end
     end
 
@@ -109,7 +115,7 @@
     x.is_a? Hash # => true
 
     case x
-    when Hash 
+    when Hash
       ...
     else
       fail
@@ -147,6 +153,12 @@
   hiding<br>of state-process, and **extreme late-binding**<br>of all things."
 
 * *Alan Kay*
+
+.notes Next: Whut
+
+!SLIDE
+
+![whut](whut.jpeg)
 
 .notes Next: ruby spec
 

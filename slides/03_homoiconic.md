@@ -18,7 +18,7 @@
 !SLIDE bullets smallish highlight
 
 * "In computer programming, homoiconicity is a property of some programming
-  languages, in which** the primary representation of programs **is also a
+  languages, in which<strong> the primary representation of programs </strong>is also a
   data structure in a primitive type of the language itself, from the Greek
   words homo meaning the same and icon meaning representation. This makes
   metaprogramming easier than in a language without this property."
@@ -30,8 +30,8 @@
 !SLIDE bullets smallish highlight
 
 * "In computer programming, homoiconicity is a property of some programming
-  languages, in which the primary representation of programs** is also a data
-  structure in a primitive type **of the language itself, from the Greek words
+  languages, in which the primary representation of programs<strong> is also a data
+  structure in a primitive type </strong>of the language itself, from the Greek words
   homo meaning the same and icon meaning representation. This makes
   metaprogramming easier than in a language without this property."
 
@@ -44,8 +44,8 @@
 * "In computer programming, homoiconicity is a property of some programming
   languages, in which the primary representation of programs is also a data
   structure in a primitive type of the language itself, from the Greek words
-  homo meaning the same and icon meaning representation.** This makes
-  metaprogramming easier **than in a language without this property."
+  homo meaning the same and icon meaning representation.<strong> This makes
+  metaprogramming easier </strong>than in a language without this property."
 
 * Wikipedia
 

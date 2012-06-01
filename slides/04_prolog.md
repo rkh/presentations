@@ -22,8 +22,12 @@
 .notes Next: prolog
 
 !SLIDE
+![prolog](prolog.jpg)
 
-# Prolog
+.notes Next: aaron
+
+!SLIDE
+![Aaron](aaron-1.jpg)
 
 .notes Next: fact
 

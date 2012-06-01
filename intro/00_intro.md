@@ -1,37 +1,22 @@
-!SLIDE title bullets
+!SLIDE bullets
 # Beyond Ruby #
 
 * Konstantin Haase
 
-.notes Next: EY
+!SLIDE center
+
+# @konstantinhaase
+## (yes, I'm sorry about that)
 
 !SLIDE center
-![Engine Yard](engine_yard_logo.jpg)
 
-.notes Next: me
+# Sinatra
+## Rack, Rubinius, Tilt, ...
 
-!SLIDE center
-![rkh](rkh.png)
-
-.notes Next: sinatra
+![Sinatra](sinatra.png)
 
 !SLIDE center
-![sinatra](sinatra1.png)
-
-.notes Next: book
+![Sinatra: Up And Running](book.png)
 
 !SLIDE center
-![sinatra](sinatra2.png)
-
-.notes Next: rack
-
-!SLIDE center
-![rack](rack.png)
-
-.notes Next: rubinius
-
-!SLIDE center
-![rubinius](rubinius.png)
-
-.notes Next: the real question
-
+![Travis CI](travis.png)
