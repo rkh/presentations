@@ -154,12 +154,6 @@
 
 * *Alan Kay*
 
-.notes Next: Whut
-
-!SLIDE
-
-![whut](whut.jpeg)
-
 .notes Next: ruby spec
 
 !SLIDE bullets
@@ -173,6 +167,12 @@
   invoked."
 
 * *Ruby Standard (JIS X 3017)*
+
+.notes Next: Whut
+
+!SLIDE
+
+![whut](whut.jpeg)
 
 .notes Next: keywords
 

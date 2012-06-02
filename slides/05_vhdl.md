@@ -17,12 +17,17 @@
 
 !SLIDE
 
-    @@@ vhdl
-    architecture RTL of FOOBAR is
-      FOO <= '1';
-      BAR <= '0';
-      BAZ <= FOO and BAR;
-    end architecture RTL;
+<pre>
+  architecture <b>RTL</b> of <b>FOOBAR</b> is
+    <b>FOO</b> &lt;= <b>'1'</b>;
+    <b>BAR</b> &lt;= <b>'0'</b>;
+    <b>BAZ</b> &lt;= <b>FOO</b> and <b>BAR</b>;
+  end architecture <b>RTL</b>;
+
+
+</pre>
+
+![and](and.jpg)
 
 !SLIDE
 
