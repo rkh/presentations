@@ -1,23 +1,22 @@
-!SLIDE title bullets
+!SLIDE bullets
 # No Title #
 
 * Konstantin Haase
 
 !SLIDE center
-![Engine Yard](engine_yard_logo.jpg)
+
+# @konstantinhaase
+## (yes, I'm sorry about that)
 
 !SLIDE center
-![rkh](rkh.png)
+
+# Sinatra
+## Rack, Rubinius, Tilt, ...
+
+![Sinatra](sinatra.png)
 
 !SLIDE center
-![sinatra](sinatra1.png)
+![Sinatra: Up And Running](book.png)
 
 !SLIDE center
-![sinatra](sinatra2.png)
-
-!SLIDE center
-![rack](rack.png)
-
-!SLIDE center
-![rubinius](rubinius.png)
-
+![Travis CI](travis.png)
